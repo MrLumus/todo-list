@@ -1,38 +1,89 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-size: 12px;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("/public//bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 12px 0;
+}
+
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todoLists {
+  width: 600px;
+  margin: 0 auto;
+  min-height: calc(100vh - 24px);
+  max-height: calc(100vh - 24px);
+  overflow: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-right: 8px;
+  gap: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 600px) {
+  .todoLists {
+    width: 100%;
+    padding: 8px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoLists::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.todoLists::-webkit-scrollbar-thumb {
+  background: rgba(102, 102, 204);
+  border-radius: 8px;
+}
+
+.todoLists::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.addGroupButton {
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(102, 102, 204);
+  cursor: pointer;
+  transition: .1s linear;
+  color: #FFF;
+  font-size: 24px;
+  z-index: 10;
+  right: 12px;
+  bottom: 12px;
+}
+
+.addGroupButton:hover {
+  background-color: rgb(80, 80, 162);
+}
+
+.addGroupButton:active {
+  background-color: rgb(66, 66, 131);
+}
+
+.emptyGroups {
+  background-color: #fff;
+  padding: 16px;
+  margin: 0 auto;
+  border: 1px solid #CDCDCD;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
 }
