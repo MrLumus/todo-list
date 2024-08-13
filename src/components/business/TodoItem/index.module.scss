@@ -11,6 +11,15 @@
     background-color: #EEE;
   }
 
+  @media screen and (max-width: 1023px) {
+    &:hover {
+      background-color: #fff;
+    }
+    &:active {
+      background-color: #EEE;
+    }
+  }
+
   .trash {
     width: 12px;
     min-width: 12px;
