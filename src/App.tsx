@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import './App.css';
-import TodoList from './components/business/TodoList';
-import { IGroup } from './types/items';
+import TodoList from './components/business/TodoList/index';
 import Modal from './components/ui/Modal';
 import { Button, TextField } from '@mui/material';
+import { IGroup } from './types/items';
+import './App.css';
 
 function App() {
 const [groups, setGroups] = useState<IGroup[]>([]);
